@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title><%- title %></title>
+		<!-- htmx cdn -->
+		<script
+			src="https://unpkg.com/htmx.org@1.9.10"
+			integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://unpkg.com/htmx.org/dist/ext/response-targets.js"></script>
+		<script src="/js/scripts.js" defer></script>
+		<link rel="stylesheet" href="/css/styles.css" />
+	</head>
+	<body
+		class="bg-gray-100 flex flex-col min-h-screen"
+		hx-ext="response-targets"
+	>
+		<%- include('partials/header') -%> <%- include('partials/message') -%>
+		<main class="flex-grow"><%- include(template) %></main>
+		<%- include('partials/footer.ejs') -%>
+	</body>
+</html>
